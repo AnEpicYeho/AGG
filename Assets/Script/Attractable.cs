@@ -6,9 +6,9 @@ public class Attractable : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Core[] cores = GameObject.FindObjectsOfType <Core>();
-		print (cores.Length);
-		foreach (Core core in cores) {
+		Attractor[] attractors = GameObject.FindObjectsOfType <Attractor>();
+		print (attractors.Length);
+		foreach (Attractor core in attractors) {
 			core.AddAttractable (this.gameObject);
 		}
 	}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Core : MonoBehaviour {
+public class Attractor : MonoBehaviour {
 
 	const float grabitationalConstant = 667.4f;
 	private Rigidbody rigidBody;
@@ -28,8 +28,8 @@ public class Core : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rigidBody = GetComponent<Rigidbody> ();
-		Core[] otherCores = GameObject.FindObjectsOfType<Core> ();
-		foreach(Core otherCore in otherCores){
+		Attractor[] otherCores = GameObject.FindObjectsOfType<Attractor> ();
+		foreach(Attractor otherCore in otherCores){
 			if(otherCore != this){
 				attractables = new List<GameObject> ();
 				attractables = otherCore.getAttractablesList ();
